@@ -43,7 +43,7 @@
     $res = [];
     for ($x=0;$x<count($database);$x++) {
         $disco = $database[$x];
-        if ($disco['author']==$author || $author=='tutti') {
+        if ($disco['author']==$author || $author=='All') {
           $res[] = $disco;
       }
     }

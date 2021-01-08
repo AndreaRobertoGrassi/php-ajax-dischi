@@ -19,7 +19,8 @@
 
       <!-- scelta del genere -->
       <div class="genere-musicale">
-        <button type="button" name="button" v-for="x in database" @click="filtro(x.author)">{{x.author}}</button>
+        <button type="button" name="button" @click="all()">{{allStr}}</button>
+        <button type="button" name="button" v-for="x in databaseCopy" @click="filtro(x.author)">{{x.author}}</button>
       </div>
 
 

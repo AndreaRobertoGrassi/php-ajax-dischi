@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 #app{
+  height: 100vh;
   background-color: rgba(5, 11, 29, 0.9);
 }
 header{
@@ -18,9 +19,17 @@ header{
   width: 40px;
   height: auto;
 }
+.genere-musicale{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.genere-musicale button{
+  width: calc(80% / 7 - 10px);
+  margin: 10px 10px 0 10px;
+}
 main{
   width: 50%;
-  height: calc(100vh - 50px);
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -31,7 +40,7 @@ main{
   width: calc(100% / 3 - 30px);
   height: 250px;
   background-color: rgba(231, 231, 231, 0.1);
-  margin: 5px 15px;
+  margin: 20px 15px;
   padding: 10px;
   display: flex;
   align-items: center;
