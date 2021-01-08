@@ -19,8 +19,10 @@
 
       <!-- scelta del genere -->
       <div class="genere-musicale">
-        <button type="button" name="button" v-for="x in database" @click="filtro(x)">{{x.author}}</button>
+        <button type="button" name="button" v-for="x in database" @click="filtro(x.author)">{{x.author}}</button>
       </div>
+
+
 
       <!-- corpo principale che contiene tutti i dischi-->
       <main>

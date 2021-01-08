@@ -18,6 +18,7 @@ var app=new Vue({
         })
         .then(res => {    // prendo i dati dal file data tramite axios
           this.database=res.data;
+          console.log(this.database);
       });
     }
   }
