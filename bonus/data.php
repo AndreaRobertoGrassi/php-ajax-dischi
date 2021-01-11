@@ -39,11 +39,11 @@
         ]
     ];
 
-    $author = $_GET['author'];
+    $author = strtolower($_GET['author']);
     $res = [];
     for ($x=0;$x<count($database);$x++) {
         $disco = $database[$x];
-        if ($disco['author']==$author || $author=='All') {
+        if (strtolower($disco['author'])==$author || $author=='all') {
           $res[] = $disco;
       }
     }
