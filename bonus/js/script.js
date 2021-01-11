@@ -7,15 +7,14 @@ var app=new Vue({
     allStr:'All'
   },
   mounted:function() {
-    this.filtro();
+    this.all(); // al caricamneto della pagina vedo tutti i dischi
   },
   methods:{
-    filtro(author=this.allStr){
-      console.log('autore',author);
+    filtro(author){  // filtro in base all'autore
       axios
         .get('data.php', {
           params:{
-            'author':author    //sarebbe la stessa cosa che scrivere nell'url ?'min'=
+            'author':author  
           }
         })
         .then(res => {    // prendo i dati dal file data tramite axios
@@ -27,8 +26,7 @@ var app=new Vue({
     },
 
     all(){
-      console.log(this.databaseCopy);
-      this.database=this.databaseCopy;
+      this.filtro('');  //ripristina la ricerca
     }
   }
 });

@@ -39,12 +39,16 @@
         ]
     ];
 
-    $author = strtolower($_GET['author']);
+    $author = strtolower($_GET['author']);  // trasformo tutto in minuscolo
     $res = [];
-    for ($x=0;$x<count($database);$x++) {
+    if (!$author) {   // se $author è vuoto
+      echo json_encode($database);
+    }else {  // altrimenti filtro in base all'autore
+      for ($x=0;$x<count($database);$x++) {
         $disco = $database[$x];
-        if (strtolower($disco['author'])==$author || $author=='all') {
+        if (strtolower($disco['author'])==$author) {
           $res[] = $disco;
+        }
       }
+      echo json_encode($res);
     }
-    echo json_encode($res);
