@@ -15,7 +15,7 @@ var app=new Vue({
       axios
         .get('data.php', {
           params:{
-            'author':author
+            'author':author    //sarebbe la stessa cosa che scrivere nell'url ?'min'=
           }
         })
         .then(res => {    // prendo i dati dal file data tramite axios
